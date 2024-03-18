@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Strike&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aboutstyle.css">
+    <script src="aboutscripts.js"></script>
+    <title>About</title>
+</head>     
+<body>
+    <div class="title">
+        <h1>BLOCKBEAT</h1>
+    </div>
+
+    <div class="container">
+        <h1>About the Game</h1>
+        <div class="about">
+            <p>Welcome to BLOCKBEAT! A heavily inspired Piano Tiles webgame!</p>
+            <p>The mechanics are simple; Hit the blocks timed with the beat, i.e, the space on the bottom! Do your best to synchronize your presses with the music!</p>
+            <button onclick="toggleOverlay()">Tips &amp; Tricks</button>
+        </div>
+        
+
+        <h1>About the Developers</h1>
+        
+        <div class="developer">
+            <img src="matt.jpg" alt="Developer 1">
+            <h2>Matt Gabriel</h2>
+            <h5>Lead Developer</h5>
+            <p>Made most of the programming / ideation for Blockbeat</p>
+        </div>
+        
+        <div class="developer">
+            <img src="jilla.jpg" alt="Developer 2">
+            <h2>Jillaine Cabuang</h2>
+            <h5>Designer + Assistant Developer</h5>
+            <p>Designed the themes and home page</p>
+        </div>
+        
+        <div class="developer">
+            <img src="sj.jpg" alt="Developer 3">
+            <h2>Seungjoo Kim</h2>
+            <h5>Assistant Developer</h5>
+            <p>Helped with bug fixes and programming this page</p>
+        </div>
+
+        <div class="overlay" id="overlay">
+            <div class="overlay-content">
+                <button onclick="toggleOverlay()">✖</button>
+                <h2>Tips and Tricks</h2>
+                <p>Refrain from hitting the keys when a note doesn't come up.</p>
+                <p>Increase or decrease your volume if the music's volume doesn't sit right with you.</p>
+                <p>Practice hand-eye coordination.</p>
+                <p>Don't overthink it, if you synchronize with the music you'll do fine!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

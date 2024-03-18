@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Blockbeat - Home</title>
+        <link rel="stylesheet" type="text/css" href="indexStyle.css">
+        <link rel="stylesheet"
+        href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <header>
+        <a href="#" class="logo">BLOCKBEAT</a>
+
+        <ul class="navlist">
+            <li><a href="">Home</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>BLOCKBEAT</h1>
+            <p id="ptext">Welcome to BLOCKBEAT! A heavily-inspired Piano Tiles webgame!
+                The mechanics are simple. Hit the blocks timed with the beat, i.e, the space on the bottom!
+                Do your best to synchronize your clicks with the music!</p>
+            
+            <button id="tptbtn">Controls and Tips</button>
+            <button id="qpbtn">Quick Play</button>
+            <script>const links = [
+                'g1.html',
+                'g2.html',
+                'g3.html',
+              ];
+              
+              function goToRandomLink() {
+                const randomIndex = Math.floor(Math.random() * links.length);
+                const randomURL = links[randomIndex];
+                window.location.href = randomURL;
+              }
+              
+              document.getElementById('qpbtn').addEventListener('click', goToRandomLink);
+              
+              document.getElementById('tptbtn').addEventListener('click', function() {
+                var ttf = document.getElementById('ptext');
+                var imgfade = document.getElementById('imglogo');
+                ttf.classList.add('fade-out');
+                imgfade.classList.add('fade-out');
+                
+                setTimeout(function() {
+                  ttf.textContent = "Tips: Press ENTER to start, Refrain from hitting the keys when a note doesn't come up, Increase or decrease your volume if the music's volume doesn't sit right with you, Don't overthink it; if you synchronize with the music you'll do fine!";
+                    var image = document.getElementById('imglogo');
+                    image.src = 'ctrls.PNG';
+                
+                  ttf.classList.remove('fade-out');
+                  ttf.classList.remove('fade-out');
+                  ttf.classList.add('fade-in');
+                  imgfade.classList.remove('fade-out');
+                }, 500); 
+              
+                setTimeout(function() {
+                  ttf.classList.remove('fade-in');
+                  imgfade.classList.remove('fade-in');
+                }, 1000);
+              });</script>
+            <div class="dropdown">
+                <button class="dropbtn">Song Select</button>
+                <div class="dropdown-content">
+                    <a href="g1.html">Happy Birthday - Easy</a>
+                    <a href="g2.html">Viva La Vida - Medium</a>
+                    <a href="g3.html">Smart - Hard</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-img">
+            <img id="imglogo" alt="Blockbeat logo" src="bblogo.PNG">
+        </div>
+    </section>
+</body>
+</html>
