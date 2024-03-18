@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BlockBeat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="g2Style.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>"Viva La Vida" by Coldplay</h1>
+        <div class="dropdown">
+          <button class="dropbtn" >Select Theme</button>
+          <div class="dropdown-content">
+            <a onclick="changeTheme('theme1')">Light (Default)</a>
+            <a onclick="changeTheme('theme2')">Dark</a>
+            <a onclick="changeTheme('theme3')">Cosmic</a>
+            <a onclick="changeTheme('theme4')">Wooden</a>
+            <a onclick="changeTheme('theme5')">Spring</a>
+          </div>
+        </div>
+    </div>
+    
+    <audio id="song2">
+        <source src="media/vlv.m4a">
+    </audio>
+
+    <div id="indicator">
+        <h3 id="count">Score: </h3>
+    </div>
+    
+    <div id="game">
+        <div id="block1"></div>
+        <div id="block2"></div>
+        <div id="block3"></div>
+        <div id="block4"></div>
+        <div id="block1copy"></div>
+        <div id="block2copy"></div>
+        <div id="block3copy"></div>
+        <div id="block4copy"></div>
+        <div id="block1copy2"></div>
+        <div id="block2copy2"></div>
+        <div id="block3copy2"></div>
+        <div id="block4copy2"></div>
+        <div id="checkbar"></div>
+    </div>
+    
+    <script src="g2Script.js"></script>
+    <script>
+    setInterval(checkLoser, 0);
+    </script>
+  
+</body>
+
+    
+    
+</html>
